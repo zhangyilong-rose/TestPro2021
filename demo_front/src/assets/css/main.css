@@ -1,0 +1,40 @@
+.content-box{
+    position: absolute;
+    left: 150px;
+    right: 0;
+    top: 70px;
+    bottom: 0;
+    overflow-y: 0;
+    -webkit-transition: left  .3s ease-in-out;
+    transition: left .3s ease-in-out;
+    background: #f0f0f0;
+}
+
+.content-collapse{
+    left: 65px;
+}
+
+.table{
+    min-width: 800px;
+}
+
+.container{
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.crumbs{
+    margin-bottom: 20px;
+}
+
+.pagination{
+    margin: 20px 0;
+    text-align:  right;
+}
+
+.content{
+    width: auto;
+    padding: 20px;
+}
