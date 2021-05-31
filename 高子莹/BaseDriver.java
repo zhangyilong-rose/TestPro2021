@@ -5,11 +5,10 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-
-import com.www.utils.*;
 
 public class BaseDriver {
 
@@ -43,8 +42,8 @@ public class BaseDriver {
 	}
 
 
-//	@AfterClass
-//	public void out() {
-//		driver.quit();
-//	}
+	@AfterClass
+	public void out() {
+		driver.quit();
+	}
 }

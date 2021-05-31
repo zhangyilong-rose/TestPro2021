@@ -2,6 +2,8 @@ package com.www.test;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
+
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -36,7 +38,7 @@ public class MainPageTest extends BaseDriver {
 		mainpage = new MainPage(driver);
 	}
 
-//	创建两人讨论组，即两人对话框
+//	用例6、创建两人讨论组，即两人对话框
 	@Test(priority = 2)
 	public void creategroup_2() throws InterruptedException {
 		mainpage.click(mainpage.creatchat());
@@ -46,30 +48,47 @@ public class MainPageTest extends BaseDriver {
 		mainpage.click(mainpage.create());
 		Thread.sleep(2000);
 		mainpage.click(mainpage.getback());
+		Assert.assertEquals(mainpage.creatchat().isDisplayed(),true);
 	}
 
-//	创建三人讨论组
+/*
+ * 	用例7-10
+ * 	创建多组三人的讨论组
+ */
 	@Test(priority = 3, dataProvider = "data")
 	public void creategroup_3(String num, String name) throws InterruptedException {
 			mainpage.buildgroup(num, name);
+			Assert.assertEquals(mainpage.creatchat().isDisplayed(),true);
 	}
 
-//	创建四人讨论组
+/*
+ * 用例11-13
+ * 	创建多组四人的讨论组
+ */
 	@Test(priority = 4, dataProvider = "data")
 	public void creategroup_4(String num,String name) throws InterruptedException {
 		mainpage.buildgroup(num, name);
+		Assert.assertEquals(mainpage.creatchat().isDisplayed(),true);
 	}
 	
-//	创建五人讨论组
+/*
+ * 用例14-15
+ * 	创建五人讨论组
+ */
 	@Test(priority = 5, dataProvider = "data")
 	public void creategroup_5(String num,String name) throws InterruptedException {
 		mainpage.buildgroup(num, name);
+		Assert.assertEquals(mainpage.creatchat().isDisplayed(),true);
 	}
 	
-//	创建六人讨论组
+/*
+ * 用例16
+ * 	创建六人讨论组
+ */
 	@Test(priority = 6, dataProvider = "data")
 	public void creategroup_6(String num,String name) throws InterruptedException {
 		mainpage.buildgroup(num, name);
+		Assert.assertEquals(mainpage.creatchat().isDisplayed(),true);
 	}
 	
 	

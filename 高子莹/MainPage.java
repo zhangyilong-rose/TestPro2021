@@ -17,6 +17,7 @@ public class MainPage {
 		AndroidElement a1 = driver.findElementByAndroidUIAutomator("text(\"服务器\")");
 		dEngine.click(a1);
 		dEngine.sendkeys("10.7.90.194");
+//		dEngine.sendkeys("10.7.88.190");
 		Thread.sleep(2000);
 		AndroidElement a2 = driver.findElementByAndroidUIAutomator("text(\"账号\")");
 		dEngine.click(a2);
@@ -195,12 +196,12 @@ public class MainPage {
 			click(list[count]);
 			Thread.sleep(2000);
 		}
-//		click(create());
-//		Thread.sleep(2000);
-//		thename(name);
-//		Thread.sleep(2000);
-//		click(surebutton());
-//		Thread.sleep(2000);
+		click(create());
+		Thread.sleep(2000);
+		thename(name);
+		Thread.sleep(2000);
+		click(surebutton());
+		Thread.sleep(2000);
 
 //		返回主页面
 		click(getback());
