@@ -32,93 +32,93 @@ public class Login extends InitAppium {
 	}
     
     /**
-     * ²âÊÔÕÊºÅ¶ÔÓ¦´íÎóµÄÃÜÂë
+     * æµ‹è¯•å¸å·å¯¹åº”é”™è¯¯çš„å¯†ç 
      */
     @Test(priority = 0)
     public void login1(){
     	boolean flag = loginOperate.login("http://192.168.80.129:11443","aaa","123321");
-    	Assertion.verifyEquals(flag,true,"ÕÊºÅÃÜÂë¸ñÊ½²»¶ÔÊÇ·ñµÇÂ¼³É¹¦");
+    	Assertion.verifyEquals(flag,true,"å¸å·å¯†ç é”™è¯¯æ˜¯å¦ç™»å½•æˆåŠŸ");
     }
 
     /**
-     * ²âÊÔÕÊºÅÃÜÂë³¤¶È¹ı³¤
+     * æµ‹è¯•å¸å·å¯†ç é•¿åº¦è¿‡é•¿
      */
     @Test(priority = 1)
     public void login2(){
         boolean flag = loginOperate.login("http://192.168.80.129:11443","123456789qazwsxedcrfvtgbyhnujmikqwertyuioasdfghjkl","74128529638596564645656");
-        Assertion.verifyEquals(flag,true,"ÕÊºÅÃÜÂë¸ñÊ½²»¶ÔÊÇ·ñµÇÂ¼³É¹¦");
+        Assertion.verifyEquals(flag,true,"å¸å·å¯†ç è¿‡é•¿æ˜¯å¦ç™»å½•æˆåŠŸ");
     }
     /**
-     * ²âÊÔÕÊºÅÃÜÂë³¤¶È¹ı¶Ì
+     * æµ‹è¯•å¸å·å¯†ç é•¿åº¦è¿‡çŸ­
      */
     @Test(priority = 2)
     public void login3(){
         boolean flag = loginOperate.login("http://192.168.80.129:11443","l","1");
-        Assertion.verifyEquals(flag,true,"ÕÊºÅÃÜÂë¸ñÊ½²»¶ÔÊÇ·ñµÇÂ¼³É¹¦");
+        Assertion.verifyEquals(flag,true,"å¸å·å¯†ç è¿‡çŸ­æ˜¯å¦ç™»å½•æˆåŠŸ");
     }
 
     /**
-     * ²âÊÔÕÊºÅÃÜÂëÎªÖĞÎÄÇé¿ö
+     * æµ‹è¯•å¸å·å¯†ç ä¸ºä¸­æ–‡æƒ…å†µ
      */
     @Test(priority = 3)
     public void login4(){
-        boolean flag = loginOperate.login("http://192.168.80.129:11443","ÕÊºÅ","ÃÜÂë");
-        Assertion.verifyEquals(flag,true,"ÕÊºÅÃÜÂëÎªÖĞÎÄÊÇ·ñµÇÂ¼³É¹¦");
+        boolean flag = loginOperate.login("http://192.168.80.129:11443","å¸å·","å¯†ç ");
+        Assertion.verifyEquals(flag,true,"å¸å·å¯†ç ä¸ºä¸­æ–‡æ˜¯å¦ç™»å½•æˆåŠŸ");
     }
 
 
 
     /**
-     * ²âÊÔÕÊºÅÃÜÂëÎª¿ÕÇé¿ö
+     * æµ‹è¯•å¸å·å¯†ç ä¸ºç©ºæƒ…å†µ
      */
     @Test(priority = 4)
     public void login5(){
         boolean flag = loginOperate.login("http://192.168.80.129:11443","","");
-        Assertion.verifyEquals(flag,true,"ÕÊºÅÃÜÂëÎª¿ÕÊÇ·ñµÇÂ¼³É¹¦");
+        Assertion.verifyEquals(flag,true,"å¸å·å¯†ç ä¸ºç©ºæ˜¯å¦ç™»å½•æˆåŠŸ");
     }
 
 
     /**
-     * ²âÊÔ·şÎñÆ÷ÕÊºÅÃÜÂëÕıÈ·Çé¿ö
+     * æµ‹è¯•æœåŠ¡å™¨å¸å·å¯†ç æ­£ç¡®æƒ…å†µ
      */
     @Test(priority = 5)
     public void login6() {
         boolean flag = loginOperate.login("http://192.168.80.129:11443","aaa","123456");
-        Assert.assertTrue(flag,"ÕÊºÅÃÜÂë¶ÔµÄÇé¿öµÇÂ¼");
+        Assert.assertTrue(flag,"æœåŠ¡å™¨å¸å·å¯†ç å¯¹çš„æƒ…å†µç™»å½•");
     }
     /**
-     * ²âÊÔÕÊºÅ²»´æÔÚ
+     * æµ‹è¯•å¸å·ä¸å­˜åœ¨
      */
     @Test(priority = 6)
     public void login7() {
         boolean flag = loginOperate.login("http://192.168.80.129:11443","zzz","123456");
-        Assert.assertTrue(flag,"ÕÊºÅÃÜÂë¶ÔµÄÇé¿öµÇÂ¼");
+        Assert.assertTrue(flag,"å¸å·ä¸å­˜åœ¨å¯¹çš„æƒ…å†µç™»å½•");
     }
     
     /**
-     * ²âÊÔ·şÎñÆ÷´íÎó
+     * æµ‹è¯•æœåŠ¡å™¨é”™è¯¯
      */
     @Test(priority = 7)
     public void login8() {
         boolean flag = loginOperate.login("http://192.168.80.129:11111","aaa","123456");
-        Assert.assertTrue(flag,"ÕÊºÅÃÜÂë¶ÔµÄÇé¿öµÇÂ¼");
+        Assert.assertTrue(flag,"æœåŠ¡å™¨é”™è¯¯çš„æƒ…å†µç™»å½•");
     }
     
     /**
-     * ²âÊÔ·şÎñÆ÷Îª¿Õ
+     * æµ‹è¯•æœåŠ¡å™¨ä¸ºç©º
      */
     @Test(priority = 8)
     public void login9() {
         boolean flag = loginOperate.login("","aaa","123456");
-        Assert.assertTrue(flag,"ÕÊºÅÃÜÂë¶ÔµÄÇé¿öµÇÂ¼");
+        Assert.assertTrue(flag,"æœåŠ¡å™¨å™¨ä¸ºç©ºçš„æƒ…å†µç™»å½•");
     }
     
     /**
-     * ²âÊÔ·şÎñÆ÷ÊäÈëÎªÖĞÎÄ
+     * æµ‹è¯•æœåŠ¡å™¨è¾“å…¥ä¸ºä¸­æ–‡
      */
     @Test(priority = 9)
     public void login10(){
-        boolean flag = loginOperate.login("·şÎñÆ÷","aaa","123456");
-        Assertion.verifyEquals(flag,true,"ÕÊºÅÃÜÂëÎª¿ÕÊÇ·ñµÇÂ¼³É¹¦");
+        boolean flag = loginOperate.login("æœåŠ¡å™¨","aaa","123456");
+        Assertion.verifyEquals(flag,true,"æœåŠ¡å™¨ä¸ºä¸­æ–‡æ˜¯å¦ç™»å½•æˆåŠŸ");
     }
 }
