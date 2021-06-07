@@ -1,4 +1,4 @@
-:Monkey: seed=1622534418674 count=20000
+:Monkey: seed=1622534418674 count=100000
 :AllowPackage: com.cnezsoft.xxm
 :IncludeCategory: android.intent.category.LAUNCHER
 :IncludeCategory: android.intent.category.MONKEY
