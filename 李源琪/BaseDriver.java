@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -26,7 +27,7 @@ public class BaseDriver {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-// @AfterClass
+ @AfterClass
 	public void tearDown() {
 		if (driver != null) {
 			driver.quit();
